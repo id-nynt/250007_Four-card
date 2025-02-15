@@ -20,18 +20,20 @@ body {
   height: 100vh;
   flex-direction: column;
   align-items: center;
-  flex: 1;
 }
 
 main {
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
 }
 
 /*CARD
 ------------------------------------*/
 .wrapper {
-  padding: 30px;
+  margin: 30px;
 }
 .wrapper article {
   display: flex;
@@ -211,6 +213,7 @@ main {
 footer .attribution {
   font-size: 1.4rem;
   color: hsl(212, 6%, 44%);
+  flex-shrink: 0;
 }
 footer a {
   text-decoration: none;
@@ -223,15 +226,7 @@ footer a:hover {
 
 /*MEDIA QUERIES FOR DESKTOP
 ------------------------------------*/
-@media screen and (min-width: 1000px) {
-  main {
-    display: grid;
-    height: 100%;
-    place-items: center;
-  }
-  .wrapper {
-    padding: 0;
-  }
+@media screen and (min-width: 980px) {
   .wrapper article {
     max-width: 600px;
   }
