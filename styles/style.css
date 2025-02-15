@@ -1,0 +1,386 @@
+/*Variables
+------------------------------------*/
+/*Function
+------------------------------------*/
+/*OVERALL STYLE
+------------------------------------*/
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  height: 100vh;
+}
+
+body {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  background-color: hsl(0, 0%, 98%);
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+main {
+  display: grid;
+  place-items: center;
+}
+
+/*CARD
+------------------------------------*/
+.wrapper {
+  padding: 30px;
+}
+.wrapper article {
+  display: flex;
+  flex-direction: column;
+  max-width: 375px;
+  justify-items: center;
+  margin: 0 auto;
+}
+.wrapper article h1 {
+  color: hsl(234, 12%, 34%);
+  font-weight: 200;
+  font-size: 2.5rem;
+  text-align: center;
+  line-height: 3.2rem;
+  margin: 0;
+  margin-top: 30px;
+}
+.wrapper article h2 {
+  color: hsl(234, 12%, 34%);
+  font-weight: 600;
+  font-size: 2.5rem;
+  text-align: center;
+  line-height: 3.2rem;
+  margin: 0;
+}
+.wrapper article p {
+  color: hsl(212, 6%, 44%);
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 2.2rem;
+  margin-top: 25px;
+  margin-bottom: 60px;
+}
+
+.group-middle {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-items: center;
+}
+
+.supervisor {
+  display: block;
+  max-width: 320px;
+  background-color: white;
+  border-radius: 5px;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: hsl(180, 62%, 55%);
+  box-shadow: 0px 10px 20px 5px rgb(205, 205, 205);
+  padding: 30px;
+}
+.supervisor h3 {
+  color: hsl(234, 12%, 34%);
+  font-weight: 600;
+  font-size: 2rem;
+  margin: 0 0 5px 0;
+}
+.supervisor p {
+  color: hsl(212, 6%, 44%);
+  font-weight: 400;
+  font-size: 1.4rem;
+  margin: 0 0 20px 0;
+}
+.supervisor img {
+  width: 68px;
+  height: 68px;
+  display: flex;
+  margin: auto;
+  margin-right: 0;
+  padding: 15px 0;
+}
+
+.team-builder {
+  display: block;
+  max-width: 320px;
+  background-color: white;
+  border-radius: 5px;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: hsl(0, 78%, 62%);
+  box-shadow: 0px 10px 20px 5px rgb(205, 205, 205);
+  padding: 30px;
+}
+.team-builder h3 {
+  color: hsl(234, 12%, 34%);
+  font-weight: 600;
+  font-size: 2rem;
+  margin: 0 0 5px 0;
+}
+.team-builder p {
+  color: hsl(212, 6%, 44%);
+  font-weight: 400;
+  font-size: 1.4rem;
+  margin: 0 0 20px 0;
+}
+.team-builder img {
+  width: 68px;
+  height: 68px;
+  display: flex;
+  margin: auto;
+  margin-right: 0;
+  padding: 15px 0;
+}
+
+.karma {
+  display: block;
+  max-width: 320px;
+  background-color: white;
+  border-radius: 5px;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: hsl(34, 97%, 64%);
+  box-shadow: 0px 10px 20px 5px rgb(205, 205, 205);
+  padding: 30px;
+}
+.karma h3 {
+  color: hsl(234, 12%, 34%);
+  font-weight: 600;
+  font-size: 2rem;
+  margin: 0 0 5px 0;
+}
+.karma p {
+  color: hsl(212, 6%, 44%);
+  font-weight: 400;
+  font-size: 1.4rem;
+  margin: 0 0 20px 0;
+}
+.karma img {
+  width: 68px;
+  height: 68px;
+  display: flex;
+  margin: auto;
+  margin-right: 0;
+  padding: 15px 0;
+}
+
+.calculator {
+  display: block;
+  max-width: 320px;
+  background-color: white;
+  border-radius: 5px;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: hsl(212, 86%, 64%);
+  box-shadow: 0px 10px 20px 5px rgb(205, 205, 205);
+  padding: 30px;
+}
+.calculator h3 {
+  color: hsl(234, 12%, 34%);
+  font-weight: 600;
+  font-size: 2rem;
+  margin: 0 0 5px 0;
+}
+.calculator p {
+  color: hsl(212, 6%, 44%);
+  font-weight: 400;
+  font-size: 1.4rem;
+  margin: 0 0 20px 0;
+}
+.calculator img {
+  width: 68px;
+  height: 68px;
+  display: flex;
+  margin: auto;
+  margin-right: 0;
+  padding: 15px 0;
+}
+
+footer .attribution {
+  font-size: 1.4rem;
+  color: hsl(212, 6%, 44%);
+}
+footer a {
+  text-decoration: none;
+  color: hsl(212, 86%, 64%);
+  font-weight: 600;
+}
+footer a:hover {
+  color: hsl(180, 62%, 55%);
+}
+
+/*MEDIA QUERIES FOR DESKTOP
+------------------------------------*/
+@media screen and (min-width: 1000px) {
+  main {
+    display: grid;
+    height: 100%;
+    place-items: center;
+  }
+  .wrapper {
+    padding: 0;
+  }
+  .wrapper article {
+    max-width: 600px;
+  }
+  .wrapper article h1 {
+    color: hsl(234, 12%, 34%);
+    font-weight: 200;
+    font-size: 4rem;
+    text-align: center;
+    line-height: 5.4rem;
+    margin: 0;
+    margin-top: 30px;
+  }
+  .wrapper article h2 {
+    color: hsl(234, 12%, 34%);
+    font-weight: 600;
+    font-size: 4rem;
+    text-align: center;
+    line-height: 5.4rem;
+    margin: 0;
+  }
+  .wrapper article p {
+    font-size: 1.8rem;
+  }
+  .wrapper .cards {
+    flex-direction: row;
+    gap: 30px;
+  }
+  .supervisor {
+    display: block;
+    max-width: 320px;
+    background-color: white;
+    border-radius: 5px;
+    border-top-style: solid;
+    border-top-width: 3px;
+    border-top-color: hsl(180, 62%, 55%);
+    box-shadow: 0px 10px 20px 5px rgb(205, 205, 205);
+    padding: 30px;
+  }
+  .supervisor h3 {
+    color: hsl(234, 12%, 34%);
+    font-weight: 600;
+    font-size: 2.4rem;
+    margin: 0 0 5px 0;
+  }
+  .supervisor p {
+    color: hsl(212, 6%, 44%);
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin: 0 0 20px 0;
+  }
+  .supervisor img {
+    width: 68px;
+    height: 68px;
+    display: flex;
+    margin: auto;
+    margin-right: 0;
+    padding: 15px 0;
+  }
+  .team-builder {
+    display: block;
+    max-width: 320px;
+    background-color: white;
+    border-radius: 5px;
+    border-top-style: solid;
+    border-top-width: 3px;
+    border-top-color: hsl(0, 78%, 62%);
+    box-shadow: 0px 10px 20px 5px rgb(205, 205, 205);
+    padding: 30px;
+  }
+  .team-builder h3 {
+    color: hsl(234, 12%, 34%);
+    font-weight: 600;
+    font-size: 2.4rem;
+    margin: 0 0 5px 0;
+  }
+  .team-builder p {
+    color: hsl(212, 6%, 44%);
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin: 0 0 20px 0;
+  }
+  .team-builder img {
+    width: 68px;
+    height: 68px;
+    display: flex;
+    margin: auto;
+    margin-right: 0;
+    padding: 15px 0;
+  }
+  .karma {
+    display: block;
+    max-width: 320px;
+    background-color: white;
+    border-radius: 5px;
+    border-top-style: solid;
+    border-top-width: 3px;
+    border-top-color: hsl(34, 97%, 64%);
+    box-shadow: 0px 10px 20px 5px rgb(205, 205, 205);
+    padding: 30px;
+  }
+  .karma h3 {
+    color: hsl(234, 12%, 34%);
+    font-weight: 600;
+    font-size: 2.4rem;
+    margin: 0 0 5px 0;
+  }
+  .karma p {
+    color: hsl(212, 6%, 44%);
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin: 0 0 20px 0;
+  }
+  .karma img {
+    width: 68px;
+    height: 68px;
+    display: flex;
+    margin: auto;
+    margin-right: 0;
+    padding: 15px 0;
+  }
+  .calculator {
+    display: block;
+    max-width: 320px;
+    background-color: white;
+    border-radius: 5px;
+    border-top-style: solid;
+    border-top-width: 3px;
+    border-top-color: hsl(212, 86%, 64%);
+    box-shadow: 0px 10px 20px 5px rgb(205, 205, 205);
+    padding: 30px;
+  }
+  .calculator h3 {
+    color: hsl(234, 12%, 34%);
+    font-weight: 600;
+    font-size: 2.4rem;
+    margin: 0 0 5px 0;
+  }
+  .calculator p {
+    color: hsl(212, 6%, 44%);
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin: 0 0 20px 0;
+  }
+  .calculator img {
+    width: 68px;
+    height: 68px;
+    display: flex;
+    margin: auto;
+    margin-right: 0;
+    padding: 15px 0;
+  }
+}/*# sourceMappingURL=style.css.map */

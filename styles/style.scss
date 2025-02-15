@@ -1,0 +1,214 @@
+/*Variables
+------------------------------------*/
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+
+$grey-dark: hsl(234, 12%, 34%);
+$grey-medium: hsl(212, 6%, 44%);
+$grey-light: hsl(0, 0%, 98%);
+$box-background: white;
+
+//font-size for desktop
+$font-size-h1-big: 4rem;
+$line-height-h1-big: 5.4rem;
+$font-size-p1-big: 1.8rem;
+$font-size-h3-big: 2.4rem;
+$font-size-p2-big: 1.5rem;
+
+//font-size for mobile
+$font-size-h1-small: 2.5rem;
+$line-height-h1-small: 3.2rem;
+$font-size-p1-small: 1.6rem;
+$font-size-h3-small: 2rem;
+$font-size-p2-small: 1.4rem;
+
+$layout-gap: 30px;
+
+
+/*Function
+------------------------------------*/
+@mixin section-box($font-h3-size, $font-p-size, $color) {
+    display: block;
+    max-width: 320px;
+    background-color: $box-background;
+    border-radius: 5px;
+    border-top-style: solid;
+    border-top-width: 3px;
+    border-top-color: $color;
+    box-shadow: 0px 10px 20px 5px rgb(205, 205, 205);
+    padding: 30px;
+
+    h3 {
+        color: $grey-dark;
+        font-weight: 600;
+        font-size: $font-h3-size;
+        margin: 0 0 5px 0;
+    }
+    p {
+        color: $grey-medium;
+        font-weight: 400;
+        font-size: $font-p-size;
+        margin: 0 0 20px 0;
+    }
+    img {
+        width: 68px;
+        height: 68px;
+        display: flex;
+        margin: auto;
+        margin-right: 0;
+        padding: 15px 0;
+    }
+}
+
+@mixin title($font-title-size, $line-height, $weight) {
+    color: $grey-dark;
+    font-weight: $weight;
+    font-size: $font-title-size;
+    text-align: center;
+    line-height: $line-height;
+    margin: 0;
+}
+
+/*OVERALL STYLE
+------------------------------------*/
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    height: 100vh;
+}
+
+body {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    background-color: $grey-light;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+main {
+    display: grid;
+    place-items: center;
+}
+
+/*CARD
+------------------------------------*/
+.wrapper {
+    padding: 30px;
+    article {
+        display: flex;
+        flex-direction: column;
+        max-width: 375px;
+        justify-items: center;
+        margin: 0 auto;
+        h1 {
+            @include title(2.5rem, 3.2rem, 200);
+            margin-top: 30px;
+        }
+        h2 {
+            @include title(2.5rem, 3.2rem, 600);
+        }
+        p {
+            color: $grey-medium;
+            font-size: 1.6rem;
+            text-align: center;
+            line-height: 2.2rem;
+            margin-top: 25px;
+            margin-bottom: 60px;
+        }
+    }
+}
+
+.group-middle {
+    display: flex;
+    flex-direction: column;
+    gap: $layout-gap;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: $layout-gap;
+    align-items: center;
+    justify-items: center;
+}
+
+
+.supervisor {
+    @include section-box($font-size-h3-small, $font-size-p2-small, $cyan);
+}
+
+.team-builder {
+    @include section-box($font-size-h3-small, $font-size-p2-small, $red);
+}
+.karma {
+    @include section-box($font-size-h3-small, $font-size-p2-small, $orange);
+}
+.calculator {
+    @include section-box($font-size-h3-small, $font-size-p2-small, $blue);
+}
+
+footer {
+    .attribution {
+        font-size: $font-size-p2-small;
+        color: $grey-medium;
+    }
+    a {
+        text-decoration: none;
+        color: $blue;
+        font-weight: 600;
+        &:hover {
+            color: $cyan;
+        }
+    }
+}
+/*MEDIA QUERIES FOR DESKTOP
+------------------------------------*/
+@media screen and (min-width: 1000px) {
+    main {
+        display: grid;
+        height: 100%;
+        place-items: center;
+    }
+    
+    .wrapper {
+        padding: 0;
+        article {
+            max-width: 600px;
+            h1 {
+                @include title($font-size-h1-big, $line-height-h1-big, 200);
+                margin-top: 30px;
+            }
+            h2 {
+                @include title($font-size-h1-big, $line-height-h1-big, 600);
+            }
+            p {
+                font-size: $font-size-p1-big;
+            }
+        }
+        
+        .cards {
+            flex-direction: row;
+            gap: $layout-gap;
+        }
+    }
+    .supervisor {
+        @include section-box($font-size-h3-big, $font-size-p2-big, $cyan);
+    }
+    
+    .team-builder {
+        @include section-box($font-size-h3-big, $font-size-p2-big, $red);
+    }
+    .karma {
+        @include section-box($font-size-h3-big, $font-size-p2-big, $orange);
+    }
+    .calculator {
+        @include section-box($font-size-h3-big, $font-size-p2-big, $blue);
+    }
+}
